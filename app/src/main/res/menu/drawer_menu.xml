@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/primary">
+        <item
+            android:id="@+id/schedule_dest"
+            android:icon="@drawable/menu_schedule"
+            android:title="@string/menu_schedule" />
+
+        <item
+            android:id="@+id/speakers_dest"
+            android:icon="@drawable/menu_speakers"
+            android:title="@string/menu_speakers" />
+
+        <item
+            android:id="@+id/news_dest"
+            android:icon="@drawable/menu_news"
+            android:title="@string/menu_news" />
+
+        <item
+            android:id="@+id/partners_dest"
+            android:icon="@drawable/menu_partners"
+            android:title="@string/menu_partners" />
+    </group>
+    <item
+        android:id="@+id/about_dest"
+        android:icon="@drawable/menu_about"
+        android:title="@string/menu_about" />
+
+    <item
+        android:id="@+id/contact_dest"
+        android:icon="@drawable/menu_contact"
+        android:title="@string/menu_contact" />
+
+    <item
+        android:id="@+id/choose_conference_dest"
+        android:icon="@drawable/menu_change_conference"
+        android:title="@string/menu_choose_conference" />
+
+    <item
+        android:id="@+id/settings_dest"
+        android:icon="@drawable/menu_settings"
+        android:title="@string/menu_settings" />
+
+</menu>

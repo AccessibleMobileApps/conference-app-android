@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/schedule_dest">
+
+    <!-- About -->
+    <fragment
+        android:id="@+id/about_dest"
+        android:name="com.robinkanatzar.conference.ui.about.AboutFragment"
+        android:label="About">
+        <action
+            android:id="@+id/choose_conference_action"
+            app:destination="@id/choose_conference_dest" />
+    </fragment>
+
+    <!-- Choose Conference -->
+    <fragment
+        android:id="@+id/choose_conference_dest"
+        android:name="com.robinkanatzar.conference.ui.chooseconference.ChooseConferenceFragment"
+        android:label="Choose Conference" >
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/schedule_dest" />
+        <action
+            android:id="@+id/next_action_login"
+            app:destination="@id/login_dest" />
+    </fragment>
+
+    <!-- Contact -->
+    <fragment
+        android:id="@+id/contact_dest"
+        android:name="com.robinkanatzar.conference.ui.contact.ContactFragment"
+        android:label="Contact">
+        <action
+            android:id="@+id/choose_conference_action"
+            app:destination="@id/choose_conference_dest" />
+    </fragment>
+
+    <!-- Login -->
+    <fragment
+        android:id="@+id/login_dest"
+        android:name="com.robinkanatzar.conference.ui.login.LoginFragment"
+        android:label="Login">
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/schedule_dest" />
+        <argument
+            android:name="conferenceId"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <!-- News -->
+    <fragment
+        android:id="@+id/news_dest"
+        android:name="com.robinkanatzar.conference.ui.news.NewsFragment"
+        android:label="News" >
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/news_detail_dest" />
+        <action
+            android:id="@+id/choose_conference_action"
+            app:destination="@id/choose_conference_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/news_detail_dest"
+        android:name="com.robinkanatzar.conference.ui.newsdetail.NewsDetailFragment"
+        android:label="News">
+        <argument
+            android:name="articleId"
+            app:argType="string"/>
+        <action
+            android:id="@+id/next_action"
+            app:popUpTo="@id/news_dest">
+        </action>
+    </fragment>
+
+    <!-- Partners -->
+    <fragment
+        android:id="@+id/partners_dest"
+        android:name="com.robinkanatzar.conference.ui.partners.PartnersFragment"
+        android:label="Partners" >
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/partners_detail_dest" />
+        <action
+            android:id="@+id/choose_conference_action"
+            app:destination="@id/choose_conference_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/partners_detail_dest"
+        android:name="com.robinkanatzar.conference.ui.partnersdetail.PartnersDetailFragment"
+        android:label="Partners">
+        <argument
+            android:name="partnerId"
+            app:argType="string"/>
+        <action
+            android:id="@+id/next_action"
+            app:popUpTo="@id/partners_dest" />
+    </fragment>
+
+    <!-- Schedule -->
+    <fragment
+        android:id="@+id/schedule_dest"
+        android:name="com.robinkanatzar.conference.ui.schedule.ScheduleFragment"
+        android:label="Schedule">
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/schedule_detail_dest" />
+        <action
+            android:id="@+id/choose_conference_action"
+            app:destination="@id/choose_conference_dest" />
+        <argument
+            android:name="conferenceId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/schedule_detail_dest"
+        android:name="com.robinkanatzar.conference.ui.scheduledetail.ScheduleDetailFragment"
+        android:label="Schedule">
+        <argument
+            android:name="eventId"
+            app:argType="string"/>
+        <action
+            android:id="@+id/next_action"
+            app:popUpTo="@id/schedule_dest" />
+    </fragment>
+
+    <!-- Settings -->
+    <fragment
+        android:id="@+id/settings_dest"
+        android:name="com.robinkanatzar.conference.ui.settings.SettingsFragment"
+        android:label="Settings" >
+        <action
+            android:id="@+id/next_action_login"
+            app:destination="@id/login_dest" />
+    </fragment>
+
+    <!-- Speakers -->
+    <fragment
+        android:id="@+id/speakers_dest"
+        android:name="com.robinkanatzar.conference.ui.speakers.SpeakersFragment"
+        android:label="Speakers">
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/speakers_detail_dest" />
+        <action
+            android:id="@+id/choose_conference_action"
+            app:destination="@id/choose_conference_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/speakers_detail_dest"
+        android:name="com.robinkanatzar.conference.ui.speakersdetail.SpeakersDetailFragment"
+        android:label="Speakers">
+        <argument
+            android:name="speakerId"
+            app:argType="string"/>
+        <action
+            android:id="@+id/next_action"
+            app:popUpTo="@id/speakers_dest" />
+    </fragment>
+
+</navigation>
