@@ -1,11 +1,11 @@
 # Conference Application
 A customizable conference application written in Kotlin and backed with Firebase Firestore
 
-<img src="Screenshot_20190613-151100.png" alt="drawing" width="200"/>
-<img src="Screenshot_20190613-151104.png" alt="drawing" width="200"/>
-
 ## Google Play Store
-This app is available on the Google Play Store here : https://play.google.com/store/apps/details?id=com.robinkanatzar.conference&hl=en
+This app is available on the Google Play Store [here](https://play.google.com/store/apps/details?id=com.codeallabs.conference)
+
+## Apple App Store
+The iOS version is available on the App Store [here](https://apps.apple.com/us/app/custom-conference/id1521969215)
 
 ## Configuration
 * Create a new Firebase project. See Firebase documentation: https://firebase.google.com/docs/android/setup
